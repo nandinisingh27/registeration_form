@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIET</title>
+    <style>
+        .input{
+            display: flex;
+            flex-direction: row;
+        }
+        *{
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body style="background-color: beige ;overflow: hidden;">
+
+   
+    
+    <div class="input" style="width: 100vw; height: 100vh;">
+        <div style="width: 50vw;"><img style="height: 100vh; width: 50vw;" src="https://www.ulektznews.com/wp-content/uploads/2021/08/KIET-Group-of-Institutions.png"></div>
+        <div style="width: 50vw; display:flex ;flex-direction:column; gap:5rem ;justify-content: center; align-items: center; padding: 5vw 8vw;" >
+            <div style="position: absolute;
+            top: 5vh;
+            right: 13vw;
+            margin-bottom: 2vh;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqSSqXDUMY126ub2a17e68uZm5UOi87yi4DQ&s" >
+            </div>
+            
+            <form  id="form"  style="height: 100vh; width: 50vw; padding:5vw ; margin-top:5vh;display:flex ;flex-direction:column; gap:2rem ;" >
+                <div class="input " style="justify-content: flex-start;gap: 2rem;">
+                    <label for="name">NAME
+                    </label>
+                    <input type="text" id="name" maxlength="50" name="name" pattern="[a-zA-Z]+"  style="min-width: 500px;"    placeholder="Enter your name" required >
+                    <div class="error"></div>
+                </div>
+                <div class="input " style="justify-content: flex-start;gap: 2rem;">
+                    <label for="email">EMAIL
+                    </label>
+                    <input type="text" id="email" style="min-width: 500px;" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" name="email" placeholder="Enter your email address" required>
+                    <div class="error"></div>
+                </div>
+                <div class="input"  style="justify-content: flex-start;gap: 2rem;">
+                    <label for="phone">PHONE NUMBER
+                    </label>
+                    <input type="tel" id="phone" style="width: 410px;" pattern="[6-9][0-9]{9}"name="phone" placeholder="Enter your phone number" maxlength="10" required>
+                    <div class="error"></div>
+                </div>
+                <div class="input "style="justify-content: flex-start;gap: 2rem;">
+                    <label for="address">ADDRESS</label>
+                    <input type="address" pattern="^[^\s]+(\s+[^\s]+)*$"  id="address" style="width: 470px;" maxlength="60" name="address" placeholder="Enter your address"required>
+                    <div class="error"></div>
+                </div>
+                <div class="input"  style="justify-content: flex-start;gap: 2rem;">
+                    <label for="pincode">PINCODE</label>
+                    <input type="text"id="pincode" style="width: 470px;" pattern="[0-9]{6}"name="pincode" placeholder="Enter your pincode" maxlength="6" required>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input"  style="justify-content: flex-start;gap: 2rem;">
+                <label for="gender"  required>GENDER</label>
+                <label for="male">MALE</label>
+                    <input type="radio"id="male" name="gender" value="male">
+                   
+                <label for="female">FEMALE</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                   
+                <div class="error"></div>
+                </div>
+                <div class="input" style="justify-content: flex-start;gap: 2rem;">
+                    <label for="residence"required>RESIDENCE</label> 
+                    <select name="residence" id="residence"  class="name" style="background-color: white;">
+                        <option value="null"  class="name">SELECT</option>
+                       
+                       <option value="hosteller" class="name">HOSTELLER</option>
+                       <option value="dayscholar" class="name">DAY SCHOLAR</option>
+                    </select> 
+                    <div class="error"></div> 
+                </div>
+                <div class="input"  style="justify-content: flex-start;gap: 2rem;">
+                    <label for="password">PASSWORD</label> 
+                    <input type="password" id="password" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    style="width: 450px;" name="password"placeholder="Enter your password" required><br>
+                    <div class="error"></div>
+                </div>
+                <div class="input" style="justify-content: flex-start;gap: 2rem;">
+                    <label for="password">CONFIRM PASSWORD</label> 
+                    <input type="password" id="confirmpassword"  style="width: 370px;" name="confirmpassword"placeholder="Enter your password again" required><br>
+                    <div class="error"></div>
+                </div>
+                <div class="input"style="justify-content: flex-start;gap: 2rem;">
+                   <button type="submit" onclick="savedata()" id="submit"  style="margin-left: 40px; min-width: 500px; padding: 0.5rem 2rem; background-color:hwb(258 36% 47% / 0.541)">Submit</button>
+                </div>
+            </form>
+
+        </div>
+     </div>
+     <script src="main.js"></script>
+
+
+
+</body>
+</html>
